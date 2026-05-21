@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Bot WebApp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        /* Videoni telefon ekraniga moslab to'liq fonga yoyish */
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            object-fit: cover;
+            object-position: center;
+        }
+        /* Video ustidagi yozuvlar */
+        .overlay {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3); /* Videoni birozgina to'qroq qiladi */
+            font-family: sans-serif;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- O'ZINGIZNING VIDEONGIZ -->
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="anime.mp4" type="video/mp4">
+    </video>
+
+    <!-- Ekrandagi yozuv -->
+    <div class="overlay">
+        <h1>AnimeUz dunyosiga xush kelibsiz</h1>
+    </div>
+
+</body>
+</html>
